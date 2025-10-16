@@ -1,31 +1,63 @@
-<div class="cockpit-container">
 
-  <!-- LEFT PANEL: YOUR APP'S CONTROLS -->
-  <div class="control-panel">
-    <h3>Your Review Packet</h3>
-    <p>Copy each section and paste it into the form on the right.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReviewFlow Submission Cockpit</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-    <div class="review-item">
-      <label>Review Title</label>
-      <button onclick="copyToClipboard('My Awesome Experience with Salesforge')">Copy</button>
+    <div class="cockpit-container">
+
+        <!-- =================================== -->
+        <!-- LEFT PANEL: YOUR APP'S CONTROLS     -->
+        <!-- =================================== -->
+        <div class="control-panel">
+            <header>
+                <h1>Your Review Packet</h1>
+                <p>Copy each section and paste it into the form on the right.</p>
+            </header>
+
+            <main class="review-items">
+                <div class="review-item">
+                    <span>Review Title</span>
+                    <button onclick="copyToClipboard('My Excellent Experience with Salesforge')">Copy</button>
+                </div>
+                <div class="review-item">
+                    <span>What do you like best?</span>
+                    <button onclick="copyToClipboard('The customer support is top-notch, and the automation features have saved my team countless hours.')">Copy</button>
+                </div>
+                 <div class="review-item">
+                    <span>What do you dislike?</span>
+                    <button onclick="copyToClipboard('I wish there were more integrations with other marketing tools, but I hear that is on the roadmap.')">Copy</button>
+                </div>
+            </main>
+
+            <footer>
+                <button class="final-submit-button" onclick="confirmSubmission()">
+                    <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path></svg>
+                    I've Submitted My Review on G2!
+                </button>
+            </footer>
+        </div>
+
+        <!-- =================================== -->
+        <!-- RIGHT PANEL: THE EXTERNAL SITE      -->
+        <!-- =================================== -->
+        <div class="iframe-panel">
+            <!-- IMPORTANT: Replace this SRC with the real, correct G2 review link -->
+            <iframe src="https://www.g2.com/products/liketome/review_modalities/new?allow_chat=true&source_type=stale_reviews_callout" frameborder="0" sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
+        </div>
+
     </div>
 
-    <div class="review-item">
-      <label>What do you like best?</label>
-      <button onclick="copyToClipboard('The automation features are a huge time-saver...')">Copy</button>
-    </div>
+    <script src="script.js"></script>
 
-    <!-- ... more review items ... -->
+</body>
+</html>
 
-    <button class="final-submit-button" onclick="confirmSubmission()">
-      ✅ I've Submitted My Review on G2!
-    </button>
-  </div>
-
-  <!-- RIGHT PANEL: THE EXTERNAL SITE -->
-  <div class="iframe-panel">
-    <iframe src="https://www.g2.com/products/liketome/review_modalities/new?allow_chat=true&source_type=stale_reviews_callout" frameborder="0"></iframe>
-  </div>
-
-
-</div>
