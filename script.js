@@ -1,5 +1,5 @@
 // --- CONFIGURATION ---
-const GOOGLE_REVIEW_URL = "https://search.google.com/local/writereview?placeid=ChIJj61dQgK6j4AR4GeTYWZsSQQ"; // IMPORTANT: Replace with the client's real Place ID
+const GOOGLE_REVIEW_URL = "https://www.google.com/search?q=%D0%9E%D1%85%D0%BE%D1%80%D0%BE%D0%BD%D0%BD%D0%B5+%D0%BF%D1%96%D0%B4%D0%BF%D1%80%D0%B8%D1%94%D0%BC%D1%81%D1%82%D0%B2%D0%BE+%D0%90%D0%9F%D0%A1&rlz=1C1RXQR_enCA1146CA1146&oq=&gs_lcrp=EgZjaHJvbWUqCQgBEEUYOxjCAzIJCAAQIxgnGOoCMgkIARBFGDsYwgPSAQkxNDc4ajBqMTWoAgKwAgHxBRPonzQY31mD&sourceid=chrome&ie=UTF-8#mpd=~315244133773608684/customers/reviews"; // IMPORTANT: Replace with the client's real Place ID
 const REVIEW_ITEMS = [
     { label: "Your detailed review text", value: "The support was incredibly fast and helpful. They solved my issue in under 5 minutes, and I would highly recommend them to anyone." },
     { label: "A title for your review (optional)", value: "Excellent Service!" }
@@ -109,3 +109,4 @@ window.onfocus = () => {
         copyNextItem();
     }
 };
+
