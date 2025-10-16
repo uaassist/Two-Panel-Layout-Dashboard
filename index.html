@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReviewFlow Submission Cockpit</title>
+    <title>ReviewFlow Guided Submission</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,59 +11,55 @@
 </head>
 <body>
 
-    <div class="cockpit-container">
-
-        <!-- =================================== -->
-        <!-- LEFT PANEL: YOUR APP'S CONTROLS     -->
-        <!-- =================================== -->
-        <div class="control-panel">
+    <div id="main-container">
+        <!-- Initial State -->
+        <div id="initial-state" class="state-card">
             <header>
-                <h1>Your Review Packet</h1>
-                <p>Copy each section and paste it into the form on the right.</p>
+                <h1>Your Review Packet is Ready!</h1>
+                <p>Click the button below to open a small companion window. We'll guide you through pasting each part of your review.</p>
             </header>
-
-            <main class="review-items">
-                <div class="review-item">
-                    <span>Overall Experience (Stars)</span>
-                    <!-- Note: Google is primarily star-based first -->
-                    <button onclick="copyToClipboard('5 stars')">Copy</button>
-                </div>
-                <div class="review-item">
-                    <span>Share details of your experience</span>
-                    <button onclick="copyToClipboard('The customer support is top-notch, and the automation features have saved my team countless hours.')">Copy</button>
-                </div>
-                 <div class="review-item">
-                    <span>(Optional) Add photos</span>
-                    <button onclick="copyToClipboard('Reminder to add photos of the project')">Copy</button>
-                </div>
+            <main>
+                <!-- This is just a preview of the items -->
+                <ul class="preview-list">
+                    <li>⭐ 5-Star Rating</li>
+                    <li>Detailed Review Text</li>
+                    <li>(and more...)</li>
+                </ul>
             </main>
-
             <footer>
-                <!-- ### CHANGE #1: UPDATED BUTTON TEXT ### -->
-                <button class="final-submit-button" onclick="confirmSubmission()">
-                    <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path></svg>
-                    I've Submitted My Review on Google!
+                <button class="action-button" onclick="startGuidedReview()">Start Guided Review</button>
+            </footer>
+        </div>
+
+        <!-- Guided Pasting State (Initially Hidden) -->
+        <div id="pasting-state" class="state-card hidden">
+            <header>
+                <h1>Clipboard Assistant</h1>
+                <p id="instruction-text">We've copied the first item. Paste it into the companion window, then click back here.</p>
+            </header>
+            <main id="review-items-list">
+                <!-- JavaScript will populate this list -->
+            </main>
+            <footer>
+                <button id="final-submit-button" class="final-submit-button hidden" onclick="confirmSubmission()">
+                    ✅ I've Submitted My Review!
                 </button>
             </footer>
         </div>
 
-        <!-- =================================== -->
-        <!-- RIGHT PANEL: THE EXTERNAL SITE      -->
-        <!-- =================================== -->
-        <div class="iframe-panel">
-            <!-- ### CHANGE #2: UPDATED IFRAME SRC FOR GOOGLE ### -->
-            <!-- IMPORTANT: You MUST replace the placeid value with your client's specific Google Place ID -->
-           <iframe src="https://www.google.com/search?sca_esv=9734a983a01cfe31&rlz=1C1RXQR_enCA1146CA1146&sxsrf=AE3TifMZ_m0a3QrDJNx9z3epYnoJZkBu6g:1760577769169&si=AMgyJEvkVjFQtirYNBhM3ZJIRTaSJ6PxY6y1_6WZHGInbzDnMbqvYGHutVOtrlYMvf-2YrQjcNI62rfv4ZvQjjkK-OCcC3tbAD-9iGfqhOzyR_aP0_hzsxohlv1oqe0pg5xrNWnSEueKzVR-8g4SXeyDm-hWVyg0ya7pwCccfwAgjjyO9Jvchqed_QHPDXiWY1EpLxu9h1hMInmjjr7qC1EXZzXBI-FpLO50OqRiuqa3HJsowtaVFHc%3D&q=Medical+Plaza+-+%D0%BC%D0%B5%D0%B4%D0%B8%D1%86%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9+%D1%86%D0%B5%D0%BD%D1%82%D1%80+%28%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B0%D1%8F+%D0%BA%D0%BB%D0%B8%D0%BD%D0%B8%D0%BA%D0%B0%29+Reviews&sa=X&ved=2ahUKEwj_o5-kx6eQAxWiDzQIHfQOHb8Q0bkNegQIOxAE&biw=1920&bih=975&dpr=1.5" frameborder="0" sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
+        <!-- Blocked Popup State (Initially Hidden) -->
+        <div id="blocked-state" class="state-card hidden">
+             <header>
+                <h1>Oops! Your browser blocked the pop-up.</h1>
+                <p>No problem! We've prepared a new tab for you instead. Click the button below, and just switch between the two tabs to copy and paste.</p>
+            </header>
+            <footer>
+                <button class="action-button" onclick="handleBlockedPopup()">Open Google in New Tab</button>
+            </footer>
         </div>
-
     </div>
 
     <script src="script.js"></script>
 
 </body>
 </html>
-
-
-
-
-
