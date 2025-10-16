@@ -1,0 +1,30 @@
+<div class="cockpit-container">
+
+  <!-- LEFT PANEL: YOUR APP'S CONTROLS -->
+  <div class="control-panel">
+    <h3>Your Review Packet</h3>
+    <p>Copy each section and paste it into the form on the right.</p>
+
+    <div class="review-item">
+      <label>Review Title</label>
+      <button onclick="copyToClipboard('My Awesome Experience with Salesforge')">Copy</button>
+    </div>
+
+    <div class="review-item">
+      <label>What do you like best?</label>
+      <button onclick="copyToClipboard('The automation features are a huge time-saver...')">Copy</button>
+    </div>
+
+    <!-- ... more review items ... -->
+
+    <button class="final-submit-button" onclick="confirmSubmission()">
+      ✅ I've Submitted My Review on G2!
+    </button>
+  </div>
+
+  <!-- RIGHT PANEL: THE EXTERNAL SITE -->
+  <div class="iframe-panel">
+    <iframe src="https://www.g2.com/products/your-clients-product/reviews/start" frameborder="0"></iframe>
+  </div>
+
+</div>
