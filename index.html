@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,23 +24,25 @@
 
             <main class="review-items">
                 <div class="review-item">
-                    <span>Review Title</span>
-                    <button onclick="copyToClipboard('My Excellent Experience with Salesforge')">Copy</button>
+                    <span>Overall Experience (Stars)</span>
+                    <!-- Note: Google is primarily star-based first -->
+                    <button onclick="copyToClipboard('5 stars')">Copy</button>
                 </div>
                 <div class="review-item">
-                    <span>What do you like best?</span>
+                    <span>Share details of your experience</span>
                     <button onclick="copyToClipboard('The customer support is top-notch, and the automation features have saved my team countless hours.')">Copy</button>
                 </div>
                  <div class="review-item">
-                    <span>What do you dislike?</span>
-                    <button onclick="copyToClipboard('I wish there were more integrations with other marketing tools, but I hear that is on the roadmap.')">Copy</button>
+                    <span>(Optional) Add photos</span>
+                    <button onclick="copyToClipboard('Reminder to add photos of the project')">Copy</button>
                 </div>
             </main>
 
             <footer>
+                <!-- ### CHANGE #1: UPDATED BUTTON TEXT ### -->
                 <button class="final-submit-button" onclick="confirmSubmission()">
                     <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path></svg>
-                    I've Submitted My Review on G2!
+                    I've Submitted My Review on Google!
                 </button>
             </footer>
         </div>
@@ -50,8 +51,9 @@
         <!-- RIGHT PANEL: THE EXTERNAL SITE      -->
         <!-- =================================== -->
         <div class="iframe-panel">
-            <!-- IMPORTANT: Replace this SRC with the real, correct G2 review link -->
-            <iframe src="https://www.g2.com/products/liketome/review_modalities/new?allow_chat=true&source_type=stale_reviews_callout" frameborder="0" sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
+            <!-- ### CHANGE #2: UPDATED IFRAME SRC FOR GOOGLE ### -->
+            <!-- IMPORTANT: You MUST replace the placeid value with your client's specific Google Place ID -->
+            <iframe src="https://search.google.com/local/writereview?placeid=ChIJ_XvUSvXN1EARf1iO9YzU0SY frameborder="0" sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
         </div>
 
     </div>
@@ -60,4 +62,3 @@
 
 </body>
 </html>
-
