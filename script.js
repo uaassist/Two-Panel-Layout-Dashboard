@@ -1,5 +1,5 @@
 // --- CONFIGURATION ---
-const GOOGLE_REVIEW_URL = "https://www.google.com/search?sca_esv=be5f5ad743b3614b&rlz=1C1RXQR_enCA1146CA1146&sxsrf=AE3TifMWseXwAtYeceku2mkjEuzIHttbwA:1760583639920&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E5YoXuEpTIoXRMMqI-gBt9-QBaLSpaWmUMZRVM2NtH4_Bc6jSUSNjATcNfwRsXeOGO-GUrYwLO6W3xPukgifJF071kaFETjzApB4bMrV54Atyq4pGz17ScMVI09aigRnRaAsjA7ktkUuE8KsDZZ3zM8ymDjk&q=%D0%9E%D1%85%D0%BE%D1%80%D0%BE%D0%BD%D0%BD%D0%B5+%D0%BF%D1%96%D0%B4%D0%BF%D1%80%D0%B8%D1%94%D0%BC%D1%81%D1%82%D0%B2%D0%BE+%D0%90%D0%9F%D0%A1+Reviews&sa=X&ved=2ahUKEwimw9GT3aeQAxU2tIkEHarXNTIQ0bkNegQIJhAE&biw=1920&bih=975&dpr=1.5"; // IMPORTANT: Replace with the client's real Place ID
+const GOOGLE_REVIEW_URL = "https://www.google.com/maps/place/%D0%9E%D1%85%D0%BE%D1%80%D0%BE%D0%BD%D0%BD%D0%B5+%D0%BF%D1%96%D0%B4%D0%BF%D1%80%D0%B8%D1%94%D0%BC%D1%81%D1%82%D0%B2%D0%BE+%D0%90%D0%9F%D0%A1/@48.5081381,32.2290213,17z/data=!4m8!3m7!1s0x40d042c2f0feef3d:0x761dca57ddb727ca!8m2!3d48.5081381!4d32.2290213!9m1!1b1!16s%2Fg%2F11gbwy__10?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D"; // IMPORTANT: Replace with the client's real Place ID
 const REVIEW_ITEMS = [
     { label: "Your detailed review text", value: "The support was incredibly fast and helpful. They solved my issue in under 5 minutes, and I would highly recommend them to anyone." },
     { label: "A title for your review (optional)", value: "Excellent Service!" }
@@ -109,6 +109,7 @@ window.onfocus = () => {
         copyNextItem();
     }
 };
+
 
 
 
