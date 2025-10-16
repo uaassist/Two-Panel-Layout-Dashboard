@@ -1,5 +1,5 @@
 // --- CONFIGURATION ---
-const GOOGLE_REVIEW_URL = "https://www.google.com/search?q=%D0%9E%D1%85%D0%BE%D1%80%D0%BE%D0%BD%D0%BD%D0%B5+%D0%BF%D1%96%D0%B4%D0%BF%D1%80%D0%B8%D1%94%D0%BC%D1%81%D1%82%D0%B2%D0%BE+%D0%90%D0%9F%D0%A1&rlz=1C1RXQR_enCA1146CA1146&oq=%D0%9E%D1%85%D0%BE%D1%80%D0%BE%D0%BD%D0%BD%D0%B5+%D0%BF%D1%96%D0%B4%D0%BF%D1%80%D0%B8%D1%94%D0%BC%D1%81%D1%82%D0%B2%D0%BE+%D0%90%D0%9F%D0%A1&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg8MgYIAhBFGDwyBggDEEUYPNIBBzU1N2owajeoAgCwAgA&sourceid=chrome&ie=UTF-8#lrd=0x40d042c2f0feef3d:0x761dca57ddb727ca,1,,,,"; // IMPORTANT: Replace with the client's real Place ID
+const GOOGLE_REVIEW_URL = "https://www.google.com/search?q=%D0%9E%D1%85%D0%BE%D1%80%D0%BE%D0%BD%D0%BD%D0%B5+%D0%BF%D1%96%D0%B4%D0%BF%D1%80%D0%B8%D1%94%D0%BC%D1%81%D1%82%D0%B2%D0%BE+%D0%90%D0%9F%D0%A1&sca_esv=aa292efd2fdca36d&rlz=1C1RXQR_enCA1146CA1146&sxsrf=AE3TifMQSQqnuKMRTO6ynIBCvpyw_kiVOg%3A1760580810578&ei=ylTwaJiEI86G0PEPqYa3yA8&ved=0ahUKEwiYkcDO0qeQAxVOAzQIHSnDDfkQ4dUDCBA&oq=%D0%9E%D1%85%D0%BE%D1%80%D0%BE%D0%BD%D0%BD%D0%B5+%D0%BF%D1%96%D0%B4%D0%BF%D1%80%D0%B8%D1%94%D0%BC%D1%81%D1%82%D0%B2%D0%BE+%D0%90%D0%9F%D0%A1&gs_lp=Egxnd3Mtd2l6LXNlcnAiMNCe0YXQvtGA0L7QvdC90LUg0L_RltC00L_RgNC40ZTQvNGB0YLQstC-INCQ0J_QoUgAUABYAHAAeAGQAQCYAQCgAQCqAQC4AQzIAQCYAgCgAgCYAwCSBwCgBwCyBwC4BwDCBwDIBwA&sclient=gws-wiz-serp"; // IMPORTANT: Replace with the client's real Place ID
 const REVIEW_ITEMS = [
     { label: "Your detailed review text", value: "The support was incredibly fast and helpful. They solved my issue in under 5 minutes, and I would highly recommend them to anyone." },
     { label: "A title for your review (optional)", value: "Excellent Service!" }
@@ -109,5 +109,6 @@ window.onfocus = () => {
         copyNextItem();
     }
 };
+
 
 
