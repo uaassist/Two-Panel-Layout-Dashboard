@@ -21,7 +21,7 @@ const finalSubmitButtonEl = document.getElementById('final-submit-button');
 
 function startGuidedReview() {
     // Open the companion window. Sizing can be adjusted.
-    const windowFeatures = 'width=600,height=700,noopener,noreferrer';
+    const windowFeatures = 'width=500,height=500,noopener,noreferrer';
     companionWindow = window.open(GOOGLE_REVIEW_URL, 'ReviewFlowCompanion', windowFeatures);
 
     // Pop-up Blocker Detection
@@ -109,6 +109,7 @@ window.onfocus = () => {
         copyNextItem();
     }
 };
+
 
 
 
